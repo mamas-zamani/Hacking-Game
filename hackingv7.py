@@ -151,7 +151,7 @@ def end_game(window, guess, password):
 
     # clear window
     window.clear()
-
+    win = True
     # create outcome
     if guess == password:
         # create success
@@ -159,6 +159,7 @@ def end_game(window, guess, password):
         prompt = 'PRESS ENTER TO CONTINUE'
     else:
         # create failure
+        win = False
         outcome = [guess, '', 'LOGIN FAILURE - TERMINAL LOCKED', '','PLEASE CONTACT AN ADMINISTRATOR', '']
         prompt = 'PRESS ENTER TO EXIT'
 
@@ -170,7 +171,8 @@ def end_game(window, guess, password):
 
     # close window
     window.close()
-    print('The password was: ', password, ', sucker :p' )
+    if win == False:
+        print('The password was: ', password, ', sucker :p' )
 
 def display_outcome(window, outcome):
     # Display the outcome of the game: success or failure depending
