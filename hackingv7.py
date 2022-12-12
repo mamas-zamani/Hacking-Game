@@ -172,7 +172,7 @@ def end_game(window, guess, password):
     # close window
     window.close()
     if win == False:
-        print('The password was: ', password, ', sucker :p' )
+        print('\nThe password was: ', password, ', :p\n' )
 
 def display_outcome(window, outcome):
     # Display the outcome of the game: success or failure depending
